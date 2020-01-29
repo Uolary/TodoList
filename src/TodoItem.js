@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function TodoItem({id, title, completed}) {
+  const [checked, setChecked] = useState(completed)
+
+  const cls = ['todo']
+
+  if (checked) {
+    cls.push('complited')
+  }
+
   return (
-    <li className="todo">
+    <li className={cls.join(' ')}>
       <label>
         <input 
           type="checkbox"
-          defaultChecked={false}
+          checked={checked}
+          onChange={() => setChecked(!checked)}
         />
         <span>{title}</span>
         <i
