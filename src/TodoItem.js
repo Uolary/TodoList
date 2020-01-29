@@ -9,6 +9,11 @@ function TodoItem({id, title, completed}) {
           defaultChecked={false}
         />
         <span>{title}</span>
+        <i
+          className="material-icons red-text"
+        >
+          Delete
+        </i>
       </label>
     </li>
   )
