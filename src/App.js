@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoList from './TodoList';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class App extends React.Component {
           <label>
             Todo name
           </label>
+          <TodoList todos={this.state.todos} />
         </div>
       </div>
     )
